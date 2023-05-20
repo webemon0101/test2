@@ -109,7 +109,7 @@ function randomizeMeteo(obj) {
 function drawMeteo() {
     for(var i = 0; i < meteo.length; i++) {     // 全ての隕石について
         meteo[i].y += meteo[i].sp+aY;
-        meteo[i].x -=aX;              // それぞれのスピードで動かす
+        meteo[i].x +=2*aX;              // それぞれのスピードで動かす
         if(collision(player, meteo[i]) === true) {  // 衝突判定結果がtrueなら
             window.clearInterval(timer);            // タイマーを止める
         }
