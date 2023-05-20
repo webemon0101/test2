@@ -32,7 +32,7 @@ class Ball {
 }
 var player = new Ball();                        // Ballクラスのインスタンス player を宣言
  
-var meteoNum = 25;                               // ★隕石の数
+var meteoNum = 17;                               // ★隕石の数
 var meteo = new Array(meteoNum);                // ★隕石の配列を宣言
 generateMeteo();                                // ★隕石を生成する generateEnemies を実行
  
@@ -93,7 +93,7 @@ function generateMeteo() {
     for(var i = 0; i < meteo.length; i++) {     // 全ての隕石について
         meteo[i] = new Ball();                  // Ball クラスのインスタンスとして初期化
         meteo[i].x = i * canvas.width / meteoNum + (canvas.width / meteoNum / 2);   // 隕石の横方向の位置
-        meteo[i].color = "rgb(0, 0, 255)";        // 隕石の色
+        meteo[i].color = "rgb(0, 255, 255)";        // 隕石の色
         randomizeMeteo(meteo[i])                // それ以外のプロパティはランダムに決める
     }
 }
