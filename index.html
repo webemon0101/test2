@@ -24,7 +24,7 @@ class Ball {
         this.x = 150;                           // x座標の初期値
         this.y = 200;                           // y座標の初期値
         this.radius = 50;                       // 半径の初期値
-        this.color = "rgb(0, 255, 0)";          // 色の初期値
+        this.color = "rgb(0, 255, 255)";          // 色の初期値
         this.sp = 7;                            // 速さの係数
     }
 }
@@ -99,7 +99,7 @@ function generateMeteo() {
 function randomizeMeteo(obj) {
     obj.y = Math.random() * (0 + canvas.height) - canvas.height;            // 隕石のy座標
     obj.radius = Math.random() * (canvas.width / meteoNum / 2 - 10) + 10;   // 隕石の半径
-    obj.sp = Math.random() * gameTime/100 + 1;                                  // 隕石の速さ
+    obj.sp = Math.random() * gameTime/100 + 5;                                  // 隕石の速さ
 }
  
 // ★隕石を描画する drawMeteo 関数
