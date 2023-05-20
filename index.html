@@ -79,7 +79,7 @@ function drawPlayer() {
     } else if(player.y > canvas.height) {       // yがcanvasの高さ以上なら
         player.y = canvas.height;                   // yをcanvasの高さの値にする（それより下に行かない）
     }
-    context.setBackground(Color.BLACK);
+    context.fillStyle="black";
     context.clearRect(0, 0, canvas.width, canvas.height);   // canvasの内容を消す clearRect(x, y, w, h)
     context.beginPath();                        // 描画開始
     context.arc(player.x, player.y, player.radius,  // 円を描く arc(x, y, 半径, 開始角度, 終了角度)
