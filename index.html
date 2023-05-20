@@ -99,7 +99,7 @@ function generateMeteo() {
 function randomizeMeteo(obj) {
     obj.y = Math.random() * (0 + canvas.height) - canvas.height;            // 隕石のy座標
     obj.radius = Math.random() * (canvas.width / meteoNum / 2 - 10) + 10;   // 隕石の半径
-    obj.sp = Math.random() * gameTime/100 + 5;                                  // 隕石の速さ
+    obj.sp = Math.random() * 15 + 5;                                  // 隕石の速さ
 }
  
 // ★隕石を描画する drawMeteo 関数
