@@ -80,7 +80,7 @@ function drawPlayer() {
         player.y = canvas.height;                   // yをcanvasの高さの値にする（それより下に行かない）
     }
     context.fillStyle="black";
-    context.clearRect(0, 0, canvas.width, canvas.height);   // canvasの内容を消す clearRect(x, y, w, h)
+    context.fillRect(0, 0, canvas.width, canvas.height);   // canvasの内容を消す clearRect(x, y, w, h)
     context.beginPath();                        // 描画開始
     context.arc(player.x, player.y, player.radius,  // 円を描く arc(x, y, 半径, 開始角度, 終了角度)
                 0, 2 * Math.PI);                // 角度の単位はラジアン（2π = 360度）で指定
