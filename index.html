@@ -93,7 +93,7 @@ function generateMeteo() {
     for(var i = 0; i < meteo.length; i++) {     // 全ての隕石について
         meteo[i] = new Ball();                  // Ball クラスのインスタンスとして初期化
         meteo[i].x = i * canvas.width / meteoNum + (canvas.width / meteoNum / 2);   // 隕石の横方向の位置
-        meteo[i].color = "rgb(0, 255, 255)";        // 隕石の色
+        meteo[i].color = "rgb(0, 255, 0)";        // 隕石の色
         randomizeMeteo(meteo[i])                // それ以外のプロパティはランダムに決める
     }
 }
@@ -108,7 +108,8 @@ function randomizeMeteo(obj) {
 // ★隕石を描画する drawMeteo 関数
 function drawMeteo() {
     for(var i = 0; i < meteo.length; i++) {     // 全ての隕石について
-        meteo[i].y += meteo[i].sp;              // それぞれのスピードで動かす
+        meteo[i].y += meteo[i].sp+aY;
+        meteo[i].x -=aX;              // それぞれのスピードで動かす
         if(collision(player, meteo[i]) === true) {  // 衝突判定結果がtrueなら
             window.clearInterval(timer);            // タイマーを止める
         }
