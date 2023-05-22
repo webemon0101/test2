@@ -4,6 +4,7 @@ h1{
     text-align: center;
 }
 
-#canvas{
-    background-color: darkblue;
+body{
+    background-color:darkblue;
+    text-align:center;
 }
