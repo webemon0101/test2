@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,9 +9,10 @@
 </head>
  
 <body>
+  <h1>
 <div id="txt">ここにスコアを表示</div>             <!-- スコアを表示するdiv要素 -->
 <canvas id="canvas" width="900" height="1200"></canvas>  <!-- ボールを描くcanvas要素 -->
- 
+ </h1>
 <script>
 var aX = 0, aY = 0, aZ = 0;                     // 加速度の値を入れる変数を3個用意
 var canvas = document.getElementById('canvas'); // canvas要素を取得 
@@ -23,7 +24,7 @@ class Ball {
         this.x = 150;                           // x座標の初期値
         this.y = 200;                           // y座標の初期値
         this.radius = 20;                       // 半径の初期値
-        this.color = "rgb(0, 0, 255)";          // 色の初期値
+        this.color = "rgb(255, 0, 0)";          // 色の初期値
         this.sp = 3;                            // 速さの係数
         this.sx = 0;                            // ★x方向の加速
         this.sy = 0;                            // ★y方向の加速
@@ -97,7 +98,7 @@ function generateMeteo() {
     for(var i = 0; i < meteo.length; i++) {     // 全ての隕石について
         meteo[i] = new Ball();                  // Ball クラスのインスタンスとして初期化
         meteo[i].x = i * canvas.width / meteoNum + (canvas.width / meteoNum / 2);   // 隕石の横方向の位置
-        meteo[i].color = "rgb(0, 0, 0)";        // 隕石の色
+        meteo[i].color = "rgb(145, 255, 0)";        // 隕石の色
         randomizeMeteo(meteo[i])                // それ以外のプロパティはランダムに決める
     }
 }

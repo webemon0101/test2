@@ -1,4 +1,9 @@
-#txt{
+h1{
     font-size: 100px;
-    color:orange;
+    color:red;
+    text-align: center;
+}
+
+#canvas{
+    background-color: darkblue;
 }
